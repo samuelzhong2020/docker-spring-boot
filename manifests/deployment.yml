@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: samuelzhongdockerspringboot 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: samuelzhongdockerspringboot
+  template:
+    metadata:
+      labels:
+        app: samuelzhongdockerspringboot 
+    spec:
+      containers:
+        - name: samuelzhongdockerspringboot 
+          image: myacrrepo538.azurecr.io/samuelzhongdockerspringboot
+          ports:
+          - containerPort: 80
